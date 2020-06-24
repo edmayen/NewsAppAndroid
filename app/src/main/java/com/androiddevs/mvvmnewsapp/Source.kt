@@ -1,4 +1,4 @@
-package com.androiddevs.mvvmnewsapp.UI
+package com.androiddevs.mvvmnewsapp
 
 data class Source(
     val id: Any,
