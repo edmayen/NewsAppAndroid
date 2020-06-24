@@ -1,4 +1,4 @@
-package com.androiddevs.mvvmnewsapp.util
+package com.androiddevs.mvvmnewsapp.Util
 
 class Constants {
 
