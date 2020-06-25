@@ -1,29 +1,31 @@
 package com.androiddevs.mvvmnewsapp.DB
 
 import android.content.Context
-import androidx.room.*
+import androidx.room.Database
+import androidx.room.Room
+import androidx.room.RoomDatabase
+import androidx.room.TypeConverters
 import com.androiddevs.mvvmnewsapp.Models.Article
-
 
 @Database(
     entities = [Article::class],
     version = 1
 )
 @TypeConverters(Converters::class)
-abstract class ArticleDatabase: RoomDatabase() {
+abstract class ArticleDatabase : RoomDatabase() {
 
-    abstract fun getArticle(): ArticleDao
+    abstract fun getArticleDao(): ArticleDao
 
-    companion object{
+    companion object {
         @Volatile
         private var instance: ArticleDatabase? = null
         private val LOCK = Any()
 
-        operator  fun invoke(context: Context) = instance ?: synchronized(LOCK){
-            instance ?: createDataBase(context).also { instance = it }
+        operator fun invoke(context: Context) = instance ?: synchronized(LOCK) {
+            instance ?: createDatabase(context).also { instance = it }
         }
 
-        private fun createDataBase(context: Context) =
+        private fun createDatabase(context: Context) =
             Room.databaseBuilder(
                 context.applicationContext,
                 ArticleDatabase::class.java,

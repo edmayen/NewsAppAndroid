@@ -1,8 +1,8 @@
 package com.androiddevs.mvvmnewsapp.Models
 
+
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-
 
 @Entity(
     tableName = "articles"

@@ -1,4 +1,4 @@
-package com.androiddevs.mvvmnewsapp.UI.fragments
+package com.androiddevs.mvvmnewsapp.UI.Fragments
 
 import android.os.Bundle
 import android.view.View
@@ -7,7 +7,7 @@ import com.androiddevs.mvvmnewsapp.R
 import com.androiddevs.mvvmnewsapp.UI.NewsActivity
 import com.androiddevs.mvvmnewsapp.UI.NewsViewModel
 
-class SavedNewsFragment: Fragment(R.layout.fragment_saved_news) {
+class ArticleFragment : Fragment(R.layout.fragment_article) {
 
     lateinit var viewModel: NewsViewModel
 
