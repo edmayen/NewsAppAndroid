@@ -1,7 +1,7 @@
-package com.androiddevs.mvvmnewsapp.repository
+package com.androiddevs.mvvmnewsapp.Repository
 
-import com.androiddevs.mvvmnewsapp.api.RetrofitInstance
-import com.androiddevs.mvvmnewsapp.db.ArticleDatabase
+import com.androiddevs.mvvmnewsapp.API.RetrofitInstance
+import com.androiddevs.mvvmnewsapp.DB.ArticleDatabase
 import com.androiddevs.mvvmnewsapp.models.Article
 
 class NewsRepository(
